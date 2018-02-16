@@ -221,7 +221,7 @@ module.exports = (_module$exports = {
   */
   build: (_build = {
     vendor: ['axios']
-  }, _defineProperty(_build, 'vendor', ['vuetify']), _defineProperty(_build, 'extractCSS', true), _defineProperty(_build, 'extend', function extend(config, ctx) {
+  }, _defineProperty(_build, 'vendor', ['vuetify']), _defineProperty(_build, 'vendor', ['firebase']), _defineProperty(_build, 'extractCSS', true), _defineProperty(_build, 'extend', function extend(config, ctx) {
     if (ctx.isClient) {
       // config.module.rules.push({
       //   enforce: 'pre',
@@ -234,8 +234,8 @@ module.exports = (_module$exports = {
   /*
   ** Load Vuetify into the app
   */
-  plugins: ['~/plugins/vuetify']
-}, _defineProperty(_module$exports, 'css', ['~/assets/css/app.styl']), _defineProperty(_module$exports, 'modules', ['@nuxtjs/pwa']), _module$exports);
+  plugins: ['~/plugins/vuetify', '~/plugins/fireauth']
+}, _defineProperty(_module$exports, 'css', ['~/assets/css/app.styl']), _defineProperty(_module$exports, 'modules', ['@nuxtjs/pwa']), _defineProperty(_module$exports, 'modules', ['nuxt-google-maps-module']), _module$exports);
 
 /***/ })
 /******/ ]);

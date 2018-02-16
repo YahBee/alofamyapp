@@ -21,7 +21,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"starter","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"},{"name":"mobile-web-app-capable","content":"yes"},{"name":"apple-mobile-web-app-title","content":"nuxt-express-vuetify-boilerplate"},{"name":"theme-color","content":"black"},{"name":"og:type","content":"website"},{"name":"og:title","content":"nuxt-express-vuetify-boilerplate"},{"name":"og:description","content":"Nuxt.js + Express boilerplate with Vuetify component framework"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","type":"text/css","href":"https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Material+Icons"},{"rel":"manifest","href":"/_nuxt/manifest.554b0e8a.json"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+  head: {"title":"starter","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","type":"text/css","href":"https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Material+Icons"}],"style":[],"script":[{"src":"//maps.googleapis.com/maps/api/js?key=null&libraries=places&callback","defer":true,"async":true}]},
   data: () => ({
     layout: null,
     layoutName: ''

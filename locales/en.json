@@ -1,0 +1,16 @@
+{
+  "links": {
+    "home": "home",
+    "about": "about",
+    "spanish": "Spanish version",
+    "english": "English version"
+  },
+  "home": {
+    "title": "alofamy",
+    "header": "texto en ingles"
+  },
+  "about": {
+    "title": "Sobre alofamy",
+    "introduction": "Empresa"
+  }
+}

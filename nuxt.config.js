@@ -25,6 +25,8 @@ module.exports = {
   build: {
     vendor: ['axios'],
     vendor: ['vuetify'],
+    vendor: ['firebase'],
+    // vendor: ['vue-notifications'],
     extractCSS: true,
     /*
     ** Run ESLINT on save
@@ -43,13 +45,14 @@ module.exports = {
     /*
   ** Load Vuetify into the app
   */
-  plugins: ['~/plugins/vuetify'],
+  plugins: ['~/plugins/vuetify','~/plugins/fireauth'],
   // plugins: ['~/plugins/fireauth'],
   /*
   ** Load Vuetify CSS globally
   */
   css: ['~/assets/css/app.styl'],
   modules: ['@nuxtjs/pwa'],
-  // modules: ['nuxt-google-maps-module']
+  modules: ['nuxt-google-maps-module']
 }
+
 
