@@ -14,7 +14,6 @@ module.exports = {
       { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Material+Icons' }
     ]
   },
-  mode: 'spa',
   /*
   ** Global CSS
   */
@@ -26,8 +25,14 @@ module.exports = {
     vendor: ['axios'],
     vendor: ['vuetify'],
     vendor: ['firebase'],
+    vendor: ['vue-i18n'],
+    vendor: ['vue-moment'],
+    vendor: ['vue2-filters'],
     // vendor: ['vue-notifications'],
     extractCSS: true,
+    router: {
+    middleware: 'i18n'
+    },
     /*
     ** Run ESLINT on save
     */
@@ -45,14 +50,17 @@ module.exports = {
     /*
   ** Load Vuetify into the app
   */
-  plugins: ['~/plugins/vuetify','~/plugins/fireauth'],
+  plugins: ['~/plugins/vuetify', '~/plugins/i18n.js','~/plugins/vue2Filters.js','~/plugins/vueMoments.js'],
   // plugins: ['~/plugins/fireauth'],
   /*
   ** Load Vuetify CSS globally
   */
   css: ['~/assets/css/app.styl'],
   modules: ['@nuxtjs/pwa'],
-  modules: ['nuxt-google-maps-module']
+  modules: ['nuxt-google-maps-module'],
+  generate: {
+    routes: ['/', '/en', '/en/profile','/profile']
+  }
 }
 
 

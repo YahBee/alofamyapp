@@ -78,6 +78,7 @@ var session = __webpack_require__(3);
 var cookieParser = __webpack_require__(4);
 var bodyParser = __webpack_require__(5);
 global.XMLHttpRequest = __webpack_require__(6);
+// const webchannelWrapper = require('@firebase/webchannel-wrapper');
 // const passport = require('passport')
 // const StravaStrategy = require('passport-strava').Strategy;
 
@@ -211,7 +212,6 @@ module.exports = (_module$exports = {
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: 'Nuxt.js project' }],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Material+Icons' }]
   },
-  mode: 'spa',
   /*
   ** Global CSS
   */
@@ -221,7 +221,9 @@ module.exports = (_module$exports = {
   */
   build: (_build = {
     vendor: ['axios']
-  }, _defineProperty(_build, 'vendor', ['vuetify']), _defineProperty(_build, 'vendor', ['firebase']), _defineProperty(_build, 'extractCSS', true), _defineProperty(_build, 'extend', function extend(config, ctx) {
+  }, _defineProperty(_build, 'vendor', ['vuetify']), _defineProperty(_build, 'vendor', ['firebase']), _defineProperty(_build, 'vendor', ['vue-i18n']), _defineProperty(_build, 'vendor', ['vue-moment']), _defineProperty(_build, 'vendor', ['vue2-filters']), _defineProperty(_build, 'extractCSS', true), _defineProperty(_build, 'router', {
+    middleware: 'i18n'
+  }), _defineProperty(_build, 'extend', function extend(config, ctx) {
     if (ctx.isClient) {
       // config.module.rules.push({
       //   enforce: 'pre',
@@ -234,8 +236,10 @@ module.exports = (_module$exports = {
   /*
   ** Load Vuetify into the app
   */
-  plugins: ['~/plugins/vuetify', '~/plugins/fireauth']
-}, _defineProperty(_module$exports, 'css', ['~/assets/css/app.styl']), _defineProperty(_module$exports, 'modules', ['@nuxtjs/pwa']), _defineProperty(_module$exports, 'modules', ['nuxt-google-maps-module']), _module$exports);
+  plugins: ['~/plugins/vuetify', '~/plugins/i18n.js', '~/plugins/vue2Filters.js', '~/plugins/vueMoments.js']
+}, _defineProperty(_module$exports, 'css', ['~/assets/css/app.styl']), _defineProperty(_module$exports, 'modules', ['@nuxtjs/pwa']), _defineProperty(_module$exports, 'modules', ['nuxt-google-maps-module']), _defineProperty(_module$exports, 'generate', {
+  routes: ['/', '/en', '/en/profile', '/profile']
+}), _module$exports);
 
 /***/ })
 /******/ ]);

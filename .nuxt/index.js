@@ -13,6 +13,8 @@ import { createStore } from './store.js'
 import plugin0 from 'plugin0'
 import plugin1 from 'plugin1'
 import plugin2 from 'plugin2'
+import plugin3 from 'plugin3'
+import plugin4 from 'plugin4'
 
 
 // Component: <no-ssr>
@@ -35,7 +37,7 @@ Vue.use(Meta, {
   tagIDKeyName: 'hid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
 })
 
-const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
+const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 async function createApp (ssrContext) {
   const router = createRouter()
@@ -144,6 +146,8 @@ async function createApp (ssrContext) {
   
   if (typeof plugin1 === 'function') await plugin1(ctx, inject)
   if (typeof plugin2 === 'function') await plugin2(ctx, inject)
+  if (typeof plugin3 === 'function') await plugin3(ctx, inject)
+  if (typeof plugin4 === 'function') await plugin4(ctx, inject)
   
   if (process.browser) { 
     if (typeof plugin0 === 'function') await plugin0(ctx, inject)

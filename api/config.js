@@ -1,0 +1,2 @@
+ let config = { apiKey: 'AIzaSyBxdDlTUy_mh9Pr3wR7vjHAvvAvfZVClC0', authDomain: 'alofamy-a150y.firebaseapp.com', databaseURL: 'https://alofamy-a150y.firebaseio.com', projectId: 'alofamy-a150y', storageBucket: 'alofamy-a150y.appspot.com', messagingSenderId: '399879576281' }
+export default config

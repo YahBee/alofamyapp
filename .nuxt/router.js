@@ -5,6 +5,9 @@ Vue.use(Router)
 
 const _af3119f4 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages\\index" */).then(m => m.default || m)
 const _25ced95d = () => import('..\\pages\\profile.vue' /* webpackChunkName: "pages\\profile" */).then(m => m.default || m)
+const _2664d82e = () => import('..\\pages\\chat\\index.vue' /* webpackChunkName: "pages\\chat\\index" */).then(m => m.default || m)
+const _677e9b25 = () => import('..\\pages\\chat\\Login.vue' /* webpackChunkName: "pages\\chat\\Login" */).then(m => m.default || m)
+const _95721c3e = () => import('..\\pages\\_lang\\index.vue' /* webpackChunkName: "pages\\_lang\\index" */).then(m => m.default || m)
 
 
 
@@ -49,6 +52,21 @@ export function createRouter () {
 			path: "/profile",
 			component: _25ced95d,
 			name: "profile"
+		},
+		{
+			path: "/chat",
+			component: _2664d82e,
+			name: "chat"
+		},
+		{
+			path: "/chat/Login",
+			component: _677e9b25,
+			name: "chat-Login"
+		},
+		{
+			path: "/:lang",
+			component: _95721c3e,
+			name: "lang"
 		}
     ],
     fallback: false

@@ -4,6 +4,7 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 global.XMLHttpRequest = require("xmlhttprequest");
+// const webchannelWrapper = require('@firebase/webchannel-wrapper');
 // const passport = require('passport')
 // const StravaStrategy = require('passport-strava').Strategy;
 

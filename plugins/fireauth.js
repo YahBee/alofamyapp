@@ -1,4 +1,4 @@
-import { auth } from '@/services/fireinit.js'
+import { auth } from '~/services/fireinit.js'
 
 export default (context) => {
   const {store} = context
